@@ -15,7 +15,7 @@ class ApiClient {
       `/token/${taskName}`,
       {
         apikey: process.env.ZADANIA_API_KEY,
-      }
+      },
     );
 
     if (ok) {
@@ -27,7 +27,7 @@ class ApiClient {
 
   async getTask(token: string): Promise<TaskResponse> {
     const { data, ok, originalError } = await this.api.get<TaskResponse>(
-      `/task/${token}`
+      `/task/${token}`,
     );
 
     if (ok) {
@@ -42,7 +42,7 @@ class ApiClient {
       `/answer/${token}`,
       {
         answer,
-      }
+      },
     );
 
     if (ok) {

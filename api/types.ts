@@ -10,6 +10,7 @@ export type TaskResponse = {
   input: string | string[];
   question?: string;
   blog?: string;
+  cookie?: string;
 };
 
 type ModerationResult = {
